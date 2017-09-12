@@ -1,7 +1,7 @@
 # VimTips.
 ## Tips, Preguntas y Respuestas sobre Vim.
 
-**Vim** es un editor de texto altamente configurable, construído para crear y editar cualquier tipo de archivo de texto de forma muy eficiente. Se incluye como *vi* en la mayoría de los sistemas UNIX y con Apple OS X.
+**Vim** es un editor de texto altamente configurable, construído para crear y editar cualquier tipo de archivos de texto de forma muy eficiente. Se incluye como *vi* en la mayoría de los sistemas UNIX y con Apple OS X.
 
 ## Índice de Tips.
 
@@ -11,4 +11,6 @@
 
 [003 - Autocompletado para Python.](003_VimTip.md)
 
-[004 - Sustituciones](004_VimTip.md)
+[004 - Búsquedas y Sustituciones.](004_VimTip.md)
+
+[005 - Buscar palabra bajo el cursor.](005_VimTip.md)

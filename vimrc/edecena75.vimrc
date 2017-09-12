@@ -11,6 +11,8 @@ set more 	    " Pausa el listado por pantalla cuando está llena.
 set clipboard=unnamed	" Todo lo que copiemos en el registro también se copiará en el portapapeles.
 set backspace=2     " Setea la tecla backspace.
 set mps+=<:>	    " Añade el < para el emparejado con %.
+set mps+=¡:!	    " Añade el < para el emparejado con %.
+set mps+=¿:?	    " Añade el < para el emparejado con %.
 
 " CHEQUEO DE LA ORTOGRAFÍA EN ESPAÑOL
 " https://elosasis.0wordpress.0com/2014/08/09/linux-correcto-de-texto-en-espanol-para-vim/
@@ -72,7 +74,7 @@ filetype plugin on	" Activa el uso de plugin según el tipo de archivo.
 set filetype=python
 set syntax=python
 set syntax=ON		" Activa el resaltado de sintaxis.
-set omnifunc=syntaxcomplete#Complete " Se activa con C-X C-O.
+"set omnifunc=syntaxcomplete#Complete " Se activa con C-X C-O.
 
 " AUTOCERRADO DE CARACTERES.
 " http://vim.wikia.com/wiki/Automatically_append_closing_characters

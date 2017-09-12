@@ -1,9 +1,9 @@
-# VimTip 004
+# VimTip 004.
 
-## Sustituciones
+## Búsquedas y Sustituciones.
 
-### Uso
-Para realizar sustituciones en el archivo en el que te encuentras parado, puedes realizar el siguiente comando en modo normal:
+### Uso:
+Para realizar búsquedas y sustituciones en el archivo actual, puedes realizar el siguiente comando en modo normal:
 ```bash
 :<range>s<sep><target><sep><change><sep><flags>
 ```
@@ -13,7 +13,7 @@ Para realizar sustituciones en el archivo en el que te encuentras parado, puedes
  * `<range>`Es el rango en el que queremos que se hagan las sustituciones e.g:
    * `x,y` linea `x` a la `y`.
    * `%` selecciona TODO el documento, equivalente a `1,$`.
- * `s` Es el comando de sustitución de vim.
+ * `s` Es el comando de sustitución de *Vim*.
  *  `<sep>` Este es cualquier carácter no alfanumérico o no. Ejemplos:
   * `/`
   * `_`
