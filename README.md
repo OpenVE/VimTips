@@ -10,3 +10,5 @@
 [002 - Exportar código a Html.](002_VimTip.md)
 
 [003 - Autocompletado para Python.](003_VimTip.md)
+
+[004 - Sustituciones](004_VimTip.md)
