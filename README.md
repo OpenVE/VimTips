@@ -16,3 +16,5 @@
 [005 - Buscar palabra bajo el cursor.](005_VimTip.md)
 
 [006 - Usar el porta-papeles del sistema.](006_VimTip.md)
+
+[007 - Encriptado de archivos.](007_VimTip.md)
