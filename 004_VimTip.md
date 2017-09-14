@@ -1,6 +1,6 @@
 # VimTip 004.
 
-## Búsquedas y Sustituciones.
+## Búsquedas y sustituciones.
 
 ### Uso:
 Para realizar búsquedas y sustituciones en el archivo actual, puedes realizar el siguiente comando en modo normal:

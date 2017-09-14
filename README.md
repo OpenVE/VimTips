@@ -11,6 +11,6 @@
 
 [003 - Autocompletado para Python.](003_VimTip.md)
 
-[004 - Búsquedas y Sustituciones.](004_VimTip.md)
+[004 - Búsquedas y sustituciones.](004_VimTip.md)
 
 [005 - Buscar palabra bajo el cursor.](005_VimTip.md)

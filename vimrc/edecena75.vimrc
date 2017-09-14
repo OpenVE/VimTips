@@ -13,6 +13,7 @@ set backspace=2     " Setea la tecla backspace.
 set mps+=<:>	    " Añade el < para el emparejado con %.
 set mps+=¡:!	    " Añade el < para el emparejado con %.
 set mps+=¿:?	    " Añade el < para el emparejado con %.
+set mps+=":"	    " Añade el < para el emparejado con %.
 
 " CHEQUEO DE LA ORTOGRAFÍA EN ESPAÑOL
 " https://elosasis.0wordpress.0com/2014/08/09/linux-correcto-de-texto-en-espanol-para-vim/
@@ -23,15 +24,29 @@ set spelllang=es
 set t_Co=256        " Formato a 256 colores en la terminal.
 colorscheme torte   " Esquema de Color: evening, industry, torte
 set background=dark " Color de fondo.
-set ruler           " Activa la regla inferior.
+set ruler           " Activa la regla inferior derecha.
 set showmode        " Activa la indicación de modos.
 set showcmd         " Activa la indicación de comandos.
 syntax enable       " Activa el coloreado de sintaxis.
-set number          " Activa los números de línea.
-set cursorline      " Activa resaltado de la línea activa.
-hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=black " Configuración del resaltado.
+"
+" Activa los números de línea y su formato.
+set number
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+hi CursorLineNr ctermfg=yellow
+
+" Activa el resaltado de la línea activa y su formato.
+set cursorline
+hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=black
+
+" Activa el coloreado en la columna 80.
+set colorcolumn=80	" Activa una barra coloreada en la columna 80. 
+hi ColorColumn cterm=NONE ctermbg=darkmagenta ctermfg=white guibg=black " Configuración del resaltado.
+
+" Color de los comentarios en código.
+highlight Comment ctermfg=DarkGray
+
 set showmatch       " Coincidencia de paréntesis, corchetes y llaves.
-set laststatus=2    " Always see a status line for each window, even in single window mode.
+set laststatus=0    " Muestra una línea de estado para cada ventana, incluso en modo de ventana única.
 
 " SANGRADO, ANCHO DE LÍNEA y TABULADORES.
 set wrap            " Las líneas anchas no se ven enteras.
@@ -40,12 +55,12 @@ set tabstop=4       " Espacios para el tabulado.
 set shiftwidth=4    " Tamaño para espaciado con los comandos de tabulación >> y <<
 set softtabstop=4
 "set expandtab      " Sustituye las tabulaciones por espacios.
-set textwidth=0     " Ancho de la línea.
+set textwidth=80	" Ancho de la línea.
 set columns=80	    " Ancho de la pantalla.
 set autoindent      " Autoindentación de la línea precedente.
 set smartindent	    " Autoindentación de la línea precedente.
 filetype indent on  " Autoindentación.
-set cindent	    " Identación para lenguaje C.
+set cindent		    " Identación para lenguaje C.
 set commentstring=\ #\ %s " Comentarios para Python.
 
 " BÚSQUEDAS.
@@ -110,7 +125,7 @@ vmap ,l :s/^/#/g<CR>:let @/ = ""<CR>
 vmap ,k :s/^#//g<CR>:let @/ = ""<CR>
 
 " MAPS PARA PYTHON.
-iab #! #!/usr/bin/env python<CR># encoding=utf8<CR>"""<CR><TAB>Título para este módulo.<CR>-----------------------------------<CR><CR><CR><BS>"""<CR>__author__     = "edecena75"<CR>__build__      = "edecena75"<CR>__copyright__  = "Copyleft 2017 - Edgard Decena."<CR>__license__    = "GPL"<CR>__title__      = ""<CR>__version__    = "1.0.0"<CR>__maintainer__ = "edecena75"<CR>__email__      = "edecena@gmail.com"<CR>__status__     = "Production"<CR>__credits__    = "edecena75"<CR>
+iab #! #!/usr/bin/env python<CR># encoding=utf8<CR>"""<CR><TAB>Título para este módulo.<CR>-----------------------------------<CR><CR><CR><BS>"""<CR>__author__     = "Edgard Decena"<CR>__build__      = "edecena75"<CR>__copyright__  = "Copyleft 2017 - Edgard Decena."<CR>__license__    = "GPL"<CR>__title__      = ""<CR>__version__    = "1.0.0"<CR>__maintainer__ = Edgard Decena"<CR>__email__      = "edecena@gmail.com"<CR>__status__     = "Production"<CR>__credits__    = "Edgard Decena"<CR>
 
 " MAPS PARA PHP.
 iab /* /**<CR>* Comentario<CR>*/<Up>
@@ -118,4 +133,5 @@ iab /* /**<CR>* Comentario<CR>*/<Up>
 " PATHOGEN PLUGIN MANAGER
 execute pathogen#infect()
 
+" KHUNO PLUGIN
 let g:khuno_ignore="E221,E402"
