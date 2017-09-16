@@ -19,4 +19,6 @@
 
 [007 - Encriptado de archivos.](007_VimTip.md)
 
-[008 - Ejecutar comandos del modo normal desde el modo de inserción](008_VimTip.md)
+[008 - Ejecutar comandos del modo normal desde el modo de inserción.](008_VimTip.md)
+
+[009 - El comando ```:only```.](009_VimTip.md)
