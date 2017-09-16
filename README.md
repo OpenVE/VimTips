@@ -18,3 +18,5 @@
 [006 - Usar el porta-papeles del sistema.](006_VimTip.md)
 
 [007 - Encriptado de archivos.](007_VimTip.md)
+
+[008 - Ejecutar comandos del modo normal desde el modo de inserción](008_VimTip.md)
