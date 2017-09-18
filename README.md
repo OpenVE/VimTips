@@ -24,3 +24,7 @@
 [009 - El comando ```:only```.](009_VimTip.md)
 
 [010 - Copias de seguridad.](010_VimTip.md)
+
+[011 - Editar un archivo web al vuelo.](011_VimTip.md)
+
+[012 - Explorador de archivos embebido.](012_VimTip.md)
