@@ -22,3 +22,5 @@
 [008 - Ejecutar comandos del modo normal desde el modo de inserción.](008_VimTip.md)
 
 [009 - El comando ```:only```.](009_VimTip.md)
+
+[010 - Copias de seguridad.](010_VimTip.md)
