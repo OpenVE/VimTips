@@ -17,13 +17,13 @@ set wildmenu		" Show list instead of just completing.
 set wildmode=list:longest,full " Command <Tab> completion, list matches, then longest common part, then all.
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too.
 set list
-set listchars=tab:›\ ,trail:·,extends:#,nbsp:. " Highlight problematic whitespace"
+set listchars=tab:›\ ,trail:·,extends:#,nbsp:· " Highlight problematic whitespace"
 set mps+=<:>	    " Añade el < para el emparejado con %.
 set mps+=¡:!	    " Añade el < para el emparejado con %.
 set mps+=¿:?	    " Añade el < para el emparejado con %.
 set mps+=":"	    " Añade el < para el emparejado con %.
 
-" CHEQUEO DE LA ORTOGRAFÍA EN ESPAÑOL.
+" CHEQUEO DE LA ORTOGRAFÍA EN ESPAÑOL
 " https://elosasis.0wordpress.0com/2014/08/09/linux-correcto-de-texto-en-espanol-para-vim/
 set nospell
 set spelllang=es
@@ -76,10 +76,10 @@ set commentstring=\ #\ %s " Comentarios para Python.
 
 " BÚSQUEDAS.
 set hlsearch		" Ilumina todas las apariciones de la cadena buscada.
-hi Search cterm=none ctermfg=black ctermbg=yellow
+set incsearch		" Búsqueda incremental.
+hi Search cterm=none ctermfg=black ctermbg=yellow " Color de lo encontrado.
 set ignorecase		" Ignorar mayúsculas y minúsculas en las búsquedas.
 set smartcase		" Ignorar mayúsculas y minúsculas en las búsquedas.
-set incsearch		" Búsqueda incremental.
 set wrapscan		" Búsqueda circular.
 
 " CONJUNTO DE CARACTERES y OPCIONES DE LECTURA - ESCRITURA.
@@ -125,14 +125,13 @@ map <F5> :w<CR>:!clear;./%;echo;echo "Presione enter para continuar...";read<CR>
 imap <F5> <Esc>:w<CR>:!clear;./%;echo;echo "Presione enter para continuar...";read<CR>
 map <F9> :tabn<CR> " Pasa a la siguiente Tab en modo comando.
 imap <F9> <Esc> :tabn<CR> " Pasa a la siguiente Tab en modo inserción.
-map <F8> :bnext<CR> " Pasa al siguiente buffer en modo comando.
-imap <F8> <Esc> :bnext<CR> " Pasa al siguiente buffer en modo inserción.
 map <C-G> :w<CR> " Guardar en modo comando.
+map <C-l> :bn<CR> " Pasa al siguiente buffer en modo comando.
 imap <C-G> <Esc>:w<CR><i> " Guardar en modo inserción.
 map <C-E> :wq<CR> " Guardar y salir en modo comando.
 imap <C-E> <Esc>:wq<CR> " Guardar y salir en modo inserción.
 
-" INSERT AND REMOVE COMMENTS IN VISUAL MODE PARA PYTHON.
+" INSERT AND REMOVE COMMENTS IN VISUAL MODE PARA PYTHON
 vmap ,l :s/^/#/g<CR>:let @/ = ""<CR>
 vmap ,k :s/^#//g<CR>:let @/ = ""<CR>
 

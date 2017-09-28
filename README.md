@@ -28,3 +28,5 @@
 [011 - Editar un archivo web al vuelo.](011_VimTip.md)
 
 [012 - Explorador de archivos embebido.](012_VimTip.md)
+
+[013 - Gestión de Ventanas.](013_VimTip.md)
